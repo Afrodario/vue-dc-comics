@@ -1,7 +1,15 @@
 <template>
-    <div>
+    <footer class="debug container">
+
+      <div class="footer-top">
+
+      </div>
+
+      <div class="footer-bottom">
+
+      </div>
         
-    </div>
+    </footer>
 </template>
 
 <script>
@@ -11,5 +19,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  footer {
+    background-color: green;
+  }
+
+  .footer-top {
+    height: 400px;
+    background-color: goldenrod;
+  }
+
+  .footer-bottom {
+    height: 100px;
+    background-color: pink;
+  }
 
 </style>
