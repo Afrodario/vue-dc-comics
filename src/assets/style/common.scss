@@ -8,6 +8,19 @@
     border: 1px solid black;
 }
 
+body {
+    font-family: "Open Sans";
+}
+
+h3 {
+    color: white;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;

@@ -27,12 +27,6 @@
               <img src="../assets/img/buy-dc-power-visa.svg">
               <span>DC Power Visa</span>
             </div>
-            
-
-            <!-- <img src="../assets/img/buy-comics-merchandise.png">
-            <img src="../assets/img/buy-comics-shop-locator.png">
-            <img src="../assets/img/buy-comics-subscriptions.png">
-            <img src="../assets/img/buy-dc-power-visa.svg"> -->
           </div>
         </section>
     </main>
