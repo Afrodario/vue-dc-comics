@@ -7,25 +7,9 @@
         </section>
         <section class="main-bottom flex">
           <div class="container flex gallery">
-            <div class="card flex">
-              <img src="../assets/img/buy-comics-digital-comics.png">
-              <span>Digital Comics</span>
-            </div>
-            <div class="card flex">
-              <img src="../assets/img/buy-comics-merchandise.png">
-              <span>DC Merchandise</span>
-            </div>
-            <div class="card flex">
-              <img src="../assets/img/buy-comics-shop-locator.png">
-              <span>Subscription</span>
-            </div>
-            <div class="card flex">
-              <img src="../assets/img/buy-comics-subscriptions.png">
-              <span>Comic Shop Locator</span>
-            </div>
-            <div class="card flex">
-              <img src="../assets/img/buy-dc-power-visa.svg">
-              <span>DC Power Visa</span>
+            <div v-for="(item, index) in items" :key="index" class="card flex">
+              <img :src="item.icon">
+              <span>{{item.text}}</span>
             </div>
           </div>
         </section>
@@ -35,6 +19,37 @@
 <script>
 export default {
   name: 'DcMain',
+
+  data() {
+
+    return {
+
+      items: [
+
+        {
+          icon: require("../assets/img/buy-comics-digital-comics.png"),
+          text: "Digital Comics"
+        },
+        {
+          icon: require("../assets/img/buy-comics-merchandise.png"),
+          text: "DC Merchandise"
+        },
+        {
+          icon: require("../assets/img/buy-comics-subscriptions.png"),
+          text: "Subscription"
+        },
+        {
+          icon: require("../assets/img/buy-comics-shop-locator.png"),
+          text: "Comic Shop Locator"
+        },
+        {
+          icon: require("../assets/img/buy-dc-power-visa.svg"),
+          text: "DC Power Visa"
+        }
+
+      ]
+    }
+  }
 }
 </script>
 
@@ -61,7 +76,7 @@ export default {
         }
 
         img {
-          width: 50px;
+          width: 40px;
         }
       }
   }

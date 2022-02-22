@@ -6,16 +6,9 @@
                     <img src="../assets/img/dc-logo.png">
                 </a>
                 <ul class="flex">
-                    <li>Test</li>
-                    <li>Test</li>
-                    <li>Test</li>
-                    <li>Test</li>
-                    <li>Test</li>
-                    <li>Test</li>
-                    <li>Test</li>
-                    <li>Test</li>
-                    <li>Test</li>
-                    <li>Test</li>
+                    <li v-for="(item, index) in links" :key="index">
+                        <a :href="item.url">{{item.text}}</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -25,6 +18,55 @@
 <script>
 export default {
   name: 'DcHeader',
+
+  data() {
+
+      return {
+
+          links: [
+              {
+                  text: "Characters",
+                  url: "#"
+              },
+              {
+                  text: "Comics",
+                  url: "#"
+              },
+              {
+                  text: "Movies",
+                  url: "#"
+              },
+              {
+                  text: "TV",
+                  url: "#"
+              },
+              {
+                  text: "Games",
+                  url: "#"
+              },
+              {
+                  text: "Collectibles",
+                  url: "#"
+              },
+              {
+                  text: "Videos",
+                  url: "#"
+              },
+              {
+                  text: "Fans",
+                  url: "#"
+              },
+              {
+                  text: "News",
+                  url: "#"
+              },
+              {
+                  text: "Shop",
+                  url: "#"
+              },
+          ]
+      }
+  }
 }
 </script>
 
@@ -44,14 +86,23 @@ export default {
                 justify-content: space-around;
 
                 li {
-                    padding: 15px;
-                    color: $secondaryColor;
+                    padding: 35px 15px;
                     text-transform: uppercase;
                     font-weight: bold;
+                    border-bottom: 2px solid transparent;
 
                     &:hover {
-                        color: $primaryColor;
+                        border-color: $primaryColor;
                     }
+
+                    a {
+                        color: $secondaryColor;
+
+                        &:hover {
+                            color: $primaryColor;
+                        }
+                    }
+
                 }
             }
 
