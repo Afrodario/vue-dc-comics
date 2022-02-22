@@ -16,6 +16,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../assets/style/variables.scss";
     .comic-card {
         height: 150px;
         width: 100px;
@@ -32,6 +33,7 @@ export default {
             font-size: 10px;
             text-align: center;
             margin: 5px;
+            color: white;
         }
     }
 </style>

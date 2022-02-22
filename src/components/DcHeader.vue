@@ -86,13 +86,14 @@ export default {
                 justify-content: space-around;
 
                 li {
-                    padding: 35px 15px;
+                    padding: 43px 15px;
                     text-transform: uppercase;
                     font-weight: bold;
                     border-bottom: 2px solid transparent;
 
                     &:hover {
                         border-color: $primaryColor;
+                        color: $secondaryColor;
                     }
 
                     a {
