@@ -17,10 +17,10 @@ export default {
 
 <style scoped lang="scss">
     .comic-card {
-        height: 100px;
+        height: 150px;
         width: 100px;
         flex-direction: column;
-        margin: 10px;
+        margin: 15px;
 
         img {
             width: 100%;
@@ -30,6 +30,8 @@ export default {
 
         .comic-title {
             font-size: 10px;
+            text-align: center;
+            margin: 5px;
         }
     }
 </style>

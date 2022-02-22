@@ -4,12 +4,14 @@
           <div class="jumbotron">
           </div>
           <div class="container flex">
+            <h2 class="label">CURRENT SERIES</h2>
             <DcComicCard
               v-for="(comic, index) in comics"
               :key="index"
               :thumb="comic.thumb"
               :series="comic.series"
             />
+            <button class="more-comics">LOAD MORE</button>
           </div>
         </section>
         <section class="main-bottom flex">
@@ -149,6 +151,7 @@ export default {
 
       .main-top {
         background-color: #1c1c1c;
+        padding-bottom: 30px;
 
         .jumbotron {
           height: 400px;
@@ -158,9 +161,31 @@ export default {
         .container {
           justify-content: space-around;
           flex-wrap: wrap;
-          width: calc(100% / 2);
+          width: calc(100% / 2 - 10px);
           padding: 60px 0;
+          position: relative;
         }
+      }
+
+      .label {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            color: white;
+            border: 1px solid $primaryColor;
+            padding: 10px;
+            background-color: $primaryColor;
+          }
+
+      .more-comics {
+          position: absolute;
+          bottom: -10px;
+          background-color: $primaryColor;
+          border-color: $primaryColor;
+          color: white;
+          padding: 6px;
+          width: 180px;
+          font-weight: bold;
       }
 
       .main-bottom {
